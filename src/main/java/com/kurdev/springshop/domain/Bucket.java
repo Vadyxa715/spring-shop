@@ -13,13 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "shop_buckets")
+@Table(name = "buckets")
 public class Bucket {
     private static final String SEQ_NAME = "bucket_seq";
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
-    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME)
+    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME, allocationSize = 1)
     private Long id;
     @OneToOne
     @JoinColumn(name = "user_id")
@@ -28,5 +28,5 @@ public class Bucket {
     @JoinTable(name = "buckets_products",
         joinColumns = @JoinColumn(name = "bucket_id"),
         inverseJoinColumns = @JoinColumn(name = "product_id"))
-    private List<Product> product;
+    private List<Product> products;
 }
