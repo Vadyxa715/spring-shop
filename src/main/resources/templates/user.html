@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Add user</title>
+</head>
+<body>
+<form th:action="@{/user/new}" th:object="${user}" method="post">
+  <table border="1">
+    <tr>
+      <tb>Name</tb>
+      <tb><input type="text" th:field="*{username}"></tb>
+    </tr>
+    <tr>
+      <tb>Password</tb>
+      <tb><input type="password" th:field="*{password}"></tb>
+    </tr>
+    <tr>
+      <tb>Matching password</tb>
+      <tb><input type="password" th:field="*{matchingPassword}"></tb>
+    </tr>
+    <tr>
+      <tb>Email</tb>
+      <tb><input type="email" th:field="*{email}"></tb>
+    </tr>
+  </table>
+  <button type="submit">Save</button>
+</form>
+</body>
+</html>
