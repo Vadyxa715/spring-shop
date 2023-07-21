@@ -2,7 +2,7 @@
 Данное приложение прелставляет собой аналог современного онлайн приложения магазина.
 
 Используемые модули(технологии):
-- bott;  - web;  - security;  - thymeleaf;
+- boot;  - web;  - security;  - thymeleaf;
 - data jp + postgreSQL;  - additional;
 - flyway;  - lombok.
 
